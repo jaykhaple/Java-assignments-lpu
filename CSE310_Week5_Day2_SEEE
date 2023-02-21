@@ -1,3 +1,69 @@
+\\\\\\\\\\\\\\\\\\\\\\
+Question 1
+\\\\\\\\\\\\\\\\\\\\\
+
+import java.util.Scanner;
+
+class Solution {
+    int real, imaginary;
+
+    // Default Constructor
+    Solution() {
+        real = 0;
+        imaginary = 0;
+    }
+
+    // Parameterized Constructor
+    Solution(int r, int i) {
+        real = r;
+        imaginary = i;
+    }
+
+    // Multiplication method
+    Solution Mul_Solution(Solution c1, Solution c2) {
+        Solution result = new Solution();
+        result.real = c1.real * c2.real - c1.imaginary * c2.imaginary;
+        result.imaginary = c1.real * c2.imaginary + c1.imaginary * c2.real;
+        return result;
+    }
+
+    // Display method
+    void Display() {
+        System.out.println(real + "+" + imaginary + "i");
+    }
+}
+
+public class Test_Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Read the first complex number
+        int real1 = sc.nextInt();
+        int imaginary1 = sc.nextInt();
+        Solution c1 = new Solution(real1, imaginary1);
+
+        // Read the second complex number
+        int real2 = sc.nextInt();
+        int imaginary2 = sc.nextInt();
+        Solution c2 = new Solution(real2, imaginary2);
+
+        // Calculate the product of two complex numbers
+        Solution result = new Solution().Mul_Solution(c1, c2);
+
+        // Display the result
+        result.Display();
+    }
+}
+
+
+///////////////////////////////
+///////////////////////////////
+Question 2
+//////////////////////////////
+//////////////////////////////
+
+
+
 import java.util.Scanner;
 
 class Circle {
